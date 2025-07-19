@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barışalım mı?</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 36px;
+      color: #d6336c;
+      margin-bottom: 40px;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Benimle barışır mısın? 💔</h1>
+  <div class="buttons">
+    <button id="yesBtn">Evet</button>
+    <button id="noBtn">Hayır</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    let yesFontSize = 20;
+
+    noBtn.addEventListener('click', () => {
+      yesFontSize += 10;
+      yesBtn.style.fontSize = yesFontSize + 'px';
+    });
+
+    yesBtn.addEventListener('click', () => {
+      document.body.innerHTML = "<h1>🎉 Yaşasın! Barıştık! 💕</h1>";
+    });
+  </script>
+
+</body>
+</html>
